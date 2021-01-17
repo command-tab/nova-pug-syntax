@@ -5,24 +5,20 @@
         <type>markup</type>
         <preferred-file-extension>pug</preferred-file-extension>
     </meta>
-    
     <detectors>
         <extension priority="1.0">pug</extension>
         <match-content lines="1" priority="0.7">^!!!</match-content>
     </detectors>
-    
     <comments>
         <single>
             <expression>-\#</expression>
         </single>
     </comments>
-    
     <!-- <brackets>
         <pair open="{" close="}" />
         <pair open="[" close="]" />
         <pair open="(" close=")" />
     </brackets> -->
-    
     <surrounding-pairs>
         <pair open="{" close="}" />
         <pair open="[" close="]" />
@@ -31,14 +27,12 @@
         <pair open="\" close="\" />
         <pair open="`" close="`" />
     </surrounding-pairs>
-    
     <scopes>
         <!-- Values -->
         <scope name="pug.value.text" spell-check="true">
             <expression>\\.*$</expression>
         </scope>
         <include syntax="self" collection="strings" />
-        
 
         <!-- Expressions -->
         <scope name="pug.expression">
@@ -67,19 +61,14 @@
                 </cut-off>
             </subsyntax>
         </scope>
-        
-        
         <scope name="pug.class_or_id">
             <expression>^\s*(?:([\.\#a-zA-Z][a-zA-Z]*))</expression>
-
             <capture number="1" name="pug.class_or_id.tag" />
-
-        </scope>             
-                
+        </scope>
         <scope name="pug.comment.single.html" spell-check="true">
             <expression>^\s*/.*$</expression>
         </scope>
-        
+
         <!-- Syntax -->
         <scope name="pug.declaration">
             <expression>^!!!.*$</expression>
@@ -90,13 +79,13 @@
         <scope name="pug.operator">
             <expression>(\==?\&gt;)</expression>
         </scope>
-        
+
         <!-- Comments -->
         <scope name="pug.comment.single" spell-check="true">
             <expression>^\s*-\#.*$</expression>
         </scope>
     </scopes>
-    
+
     <collections>
         <!-- Strings -->
         <collection name="strings">
@@ -107,9 +96,5 @@
                 <expression>&apos;(?:[^&apos;\\]|\\.)*(?:&apos;|$)</expression>
             </scope>
         </collection>
-        
-        
-
-        
     </collections>
 </syntax>
