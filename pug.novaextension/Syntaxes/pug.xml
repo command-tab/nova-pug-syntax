@@ -62,7 +62,7 @@
             </subsyntax>
         </scope>
         <scope name="pug.class_or_id">
-            <expression>^\s*(?:([\.\#a-zA-Z][a-zA-Z]*))</expression>
+            <expression>^\s*(?:([\.\#a-zA-Z][a-zA-Z-]*))</expression>
             <capture number="1" name="pug.class_or_id.tag" />
         </scope>
         <scope name="pug.comment.single.html" spell-check="true">
